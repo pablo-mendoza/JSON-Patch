@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import { PatchError, _deepClone, isInteger, unescapePathComponent, hasUndefined } from './helpers.mjs';
 export var JsonPatchError = PatchError;
 export var deepClone = _deepClone;
