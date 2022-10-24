@@ -59,7 +59,8 @@ var arrOps = {
             arr.splice(i, 0, this.value);
         }
         else { // array props
-            arr[i] = this.value;
+            //arr[i] = this.value;
+         Vue.set(arr, i, this.value )
         }
         // this may be needed when using '-' in an array
         return { newDocument: document, index: i };
