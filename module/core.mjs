@@ -10,12 +10,14 @@ export var deepClone = _deepClone;
 /* The operations applicable to an object */
 var objOps = {
     add: function (obj, key, document) {
-        obj[key] = this.value;
+        //obj[key] = this.value;
+        Vue.set(obj, key, this.value)
         return { newDocument: document };
     },
     remove: function (obj, key, document) {
         var removed = obj[key];
-        delete obj[key];
+        //delete obj[key];
+       Vue.delete(obj, key)
         return { newDocument: document, removed: removed };
     },
     replace: function (obj, key, document) {
